@@ -14,3 +14,21 @@ C:\Users\SMKN 1 BONDOWOSO\source\repos\Hotel\Hotel\obj\Debug\Hotel.MasterEmploye
 C:\Users\SMKN 1 BONDOWOSO\source\repos\Hotel\Hotel\obj\Debug\Hotel.MasterRoomType.resources
 C:\Users\SMKN 1 BONDOWOSO\source\repos\Hotel\Hotel\obj\Debug\Hotel.MainEmployee.resources
 C:\Users\SMKN 1 BONDOWOSO\source\repos\Hotel\Hotel\obj\Debug\Hotel.MasterRoom.resources
+C:\Users\PC 08\Source\Repos\LKS-Hotel\Hotel\bin\Debug\Hotel.exe.config
+C:\Users\PC 08\Source\Repos\LKS-Hotel\Hotel\bin\Debug\Hotel.exe
+C:\Users\PC 08\Source\Repos\LKS-Hotel\Hotel\bin\Debug\Hotel.pdb
+C:\Users\PC 08\Source\Repos\LKS-Hotel\Hotel\obj\Debug\Hotel.csproj.AssemblyReference.cache
+C:\Users\PC 08\Source\Repos\LKS-Hotel\Hotel\obj\Debug\Hotel.csproj.SuggestedBindingRedirects.cache
+C:\Users\PC 08\Source\Repos\LKS-Hotel\Hotel\obj\Debug\Hotel.MainAdmin.resources
+C:\Users\PC 08\Source\Repos\LKS-Hotel\Hotel\obj\Debug\Hotel.MainEmployee.resources
+C:\Users\PC 08\Source\Repos\LKS-Hotel\Hotel\obj\Debug\Hotel.MainLogin.resources
+C:\Users\PC 08\Source\Repos\LKS-Hotel\Hotel\obj\Debug\Hotel.MasterEmployee.resources
+C:\Users\PC 08\Source\Repos\LKS-Hotel\Hotel\obj\Debug\Hotel.MasterRoom.resources
+C:\Users\PC 08\Source\Repos\LKS-Hotel\Hotel\obj\Debug\Hotel.MasterRoomType.resources
+C:\Users\PC 08\Source\Repos\LKS-Hotel\Hotel\obj\Debug\Hotel.Properties.Resources.resources
+C:\Users\PC 08\Source\Repos\LKS-Hotel\Hotel\obj\Debug\Hotel.csproj.GenerateResource.cache
+C:\Users\PC 08\Source\Repos\LKS-Hotel\Hotel\obj\Debug\Hotel.csproj.CoreCompileInputs.cache
+C:\Users\PC 08\Source\Repos\LKS-Hotel\Hotel\obj\Debug\Hotel.exe
+C:\Users\PC 08\Source\Repos\LKS-Hotel\Hotel\obj\Debug\Hotel.pdb
+C:\Users\PC 08\Source\Repos\LKS-Hotel\Hotel\obj\Debug\Hotel.MasterItem.resources
+C:\Users\PC 08\Source\Repos\LKS-Hotel\Hotel\obj\Debug\Hotel.MasterFoodNDrink.resources

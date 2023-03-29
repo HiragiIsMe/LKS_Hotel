@@ -158,7 +158,7 @@ namespace Hotel
             }
             else
             {
-                MessageBox.Show("Please Select One Row To Update", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please Select One Row To Delete", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         bool isValidEmail(string email)

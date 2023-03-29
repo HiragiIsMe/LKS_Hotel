@@ -139,6 +139,12 @@
     <EmbeddedResource Include="MasterEmployee.resx">
       <DependentUpon>MasterEmployee.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MasterFoodNDrink.resx">
+      <DependentUpon>MasterFoodNDrink.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterItem.resx">
+      <DependentUpon>MasterItem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MasterRoom.resx">
       <DependentUpon>MasterRoom.cs</DependentUpon>
     </EmbeddedResource>

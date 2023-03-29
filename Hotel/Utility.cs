@@ -12,8 +12,11 @@ using System.Windows.Forms;
 namespace Hotel
 {
     class Connection
+
+
+
     {
-        public static string connection = @"Data Source=LAPTOP-S8UCE514;Initial Catalog=Hotel;Integrated Security=True";
+        public static string connection = @"Data Source=DESKTOP-HUJGH1E\SQLEXPRESS;Initial Catalog=Hotel;Integrated Security=True";
 
         public static SqlConnection conn = new SqlConnection(connection);
 
