@@ -32,3 +32,5 @@ C:\Users\PC 08\Source\Repos\LKS-Hotel\Hotel\obj\Debug\Hotel.exe
 C:\Users\PC 08\Source\Repos\LKS-Hotel\Hotel\obj\Debug\Hotel.pdb
 C:\Users\PC 08\Source\Repos\LKS-Hotel\Hotel\obj\Debug\Hotel.MasterItem.resources
 C:\Users\PC 08\Source\Repos\LKS-Hotel\Hotel\obj\Debug\Hotel.MasterFoodNDrink.resources
+C:\Users\PC 08\source\repos\LKS-Hotel\Hotel\obj\Debug\Hotel.Reservation.resources
+C:\Users\PC 08\source\repos\LKS-Hotel\Hotel\obj\Debug\Hotel.AddCustomer.resources
