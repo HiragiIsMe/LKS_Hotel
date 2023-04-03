@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,6 +15,11 @@ namespace Hotel
     public partial class Reservation : Form
     {
         private int id_room, id_cust;
+        private AddCustomer customer = new AddCustomer()
+        {
+            TopLevel = false,
+            TopMost = true,
+        };
         public Reservation()
         {
             InitializeComponent();
@@ -101,11 +107,7 @@ namespace Hotel
             labelSearch.Hide();
             textBoxSearch.Hide();
             dataGridViewCustomer.Hide();
-            AddCustomer customer = new AddCustomer()
-            {
-                TopLevel = false,
-                TopMost = true,
-            };
+            
             panelLoad.Controls.Clear();
             panelLoad.Controls.Add(customer);
             customer.Show();
@@ -125,8 +127,6 @@ namespace Hotel
             string query = "select Room.ID, Room.RoomNumber, Room.RoomFloor, RoomType.Price, Room.Description from Room join RoomType on Room.RoomTypeID = RoomType.ID where Room.RoomTypeID=" + comboBoxType.SelectedValue + " and Room.Status='1'";
             dataGridViewAvb.DataSource = Connection.getData(query);
             dataGridViewAvb.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewAvb.Columns[0].Visible = false;
-            dataGridViewAvb.Columns[3].HeaderText = "RoomPrice";
         }
         bool CheckRoom()
         {
@@ -298,24 +298,58 @@ namespace Hotel
 
             if (radioButtonAdd.Checked)
             {
-                AddCustomer add = new AddCustomer();
-                if(add.textBoxName.Text == "" || add.textBoxNIK.Text == "" || add.textBoxEmail.Text == "" || add.textBoxPhone.Text == "")
+                if(customer.textBoxName.Text == "" || customer.textBoxNIK.Text == "" || customer.textBoxEmail.Text == "" || customer.textBoxPhone.Text == "")
                 {
                     MessageBox.Show("Customer Field Must Be Filled", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+                bool isValidEmail(string email)
+                {
+                    var trimmedEmail = email.Trim();
+                    if (trimmedEmail.EndsWith("."))
+                    {
+                        return false;
+                    }
+
+                    try
+                    {
+                        var mail = new MailAddress(email);
+                        return mail.Address == trimmedEmail;
+                    }
+                    catch
+                    {
+                        return false;
+                    }
+                }
+                if (isValidEmail(customer.textBoxEmail.Text) == false)
+                {
+                    MessageBox.Show("Customer Email Doesn't Valid", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+
+                if(customer.textBoxNIK.TextLength != 16)
+                {
+                    MessageBox.Show("Customer NIK Must Be 16 Digit", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+
+                if(customer.dateTimePickerBirth.Value > DateTime.Now)
+                {
+                    MessageBox.Show("Customer Birth Is Not Valid", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false;
                 }
             }
 
             if (radioButtonSearch.Checked)
             {
-                if(id_cust < 0)
+                if(dataGridViewCustomer.CurrentRow.Selected == false)
                 {
                     MessageBox.Show("Please Select One Customer", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false;
                 }
             }
 
-            if(dataGridViewSel.Rows.Count < 0)
+            if(dataGridViewSel.Rows.Count == 0)
             {
                 MessageBox.Show("Please Select At Least One Room", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
@@ -323,11 +357,127 @@ namespace Hotel
 
             return true;
         }
+        string getCode()
+        {
+            string code;
+
+            SqlCommand cmd = new SqlCommand("select top(1) BookingCode from Reservation order by ID desc", Connection.conn);
+            Connection.conn.Open();
+            SqlDataReader reader = cmd.ExecuteReader();
+            reader.Read();
+            if (reader.HasRows)
+            {
+                string getCode = reader.GetString(0);
+                Connection.conn.Close();
+
+                int a = 2;
+                int b = getCode.Length - a;
+                int c = Convert.ToInt32(getCode.Substring(a,b)) + 1;
+                code = "BK" + c;
+
+                return code;
+            }
+            else
+            {
+
+                Connection.conn.Close();
+                code = "BK1";
+
+                return code;
+            }
+            Connection.conn.Close();
+        }
         private void buttonSubmit_Click(object sender, EventArgs e)
         {
             if (Validate())
             {
+                if (radioButtonSearch.Checked)
+                {
+                    SqlCommand inResr = new SqlCommand("insert into Reservation values(getdate(), "+ Model.id +", "+ id_cust +", '"+ getCode() +"')", Connection.conn);
+                    Connection.conn.Open();
+                    inResr.ExecuteNonQuery();
+                    Connection.conn.Close();
+                }
 
+                if (radioButtonAdd.Checked)
+                {
+                    SqlCommand cmd = new SqlCommand("insert into Customer values(@name,@nik,@email,@gender,@phone,@dob)", Connection.conn);
+                    cmd.Parameters.AddWithValue("@name", customer.textBoxName.Text);
+                    cmd.Parameters.AddWithValue("@nik", customer.textBoxNIK.Text);
+                    cmd.Parameters.AddWithValue("@email", customer.textBoxEmail.Text);
+                    cmd.Parameters.AddWithValue("@gender", customer.comboBoxGender.SelectedValue);
+                    cmd.Parameters.AddWithValue("@phone", customer.textBoxPhone.Text);
+                    int i = Convert.ToInt32(DateTime.Now.ToString("yyyy")) - Convert.ToInt32(customer.dateTimePickerBirth.Value.ToString("yyyy"));
+                    cmd.Parameters.AddWithValue("@dob", i);
+
+                    Connection.conn.Open();
+                    cmd.ExecuteNonQuery();
+                    Connection.conn.Close();
+
+                    SqlCommand getCust = new SqlCommand("select top(1) id from Customer order by id desc", Connection.conn);
+                    Connection.conn.Open();
+                    SqlDataReader reader = getCust.ExecuteReader();
+                    reader.Read();
+                    int idCust = reader.GetInt32(0);
+                    Connection.conn.Close();
+
+                    SqlCommand inResr = new SqlCommand("insert into Reservation values(getdate(), " + Model.id + ", " + idCust + ", '" + getCode() + "')", Connection.conn);
+                    Connection.conn.Open();
+                    inResr.ExecuteNonQuery();
+                    Connection.conn.Close();
+                }
+
+                SqlCommand getResrId = new SqlCommand("select top(1) id from Reservation order by id desc", Connection.conn);
+                Connection.conn.Open();
+                SqlDataReader read = getResrId.ExecuteReader();
+                read.Read();
+                int idRest = read.GetInt32(0);
+                Connection.conn.Close();
+
+                label1.Text = idRest.ToString();
+                for(int i = 0; i < dataGridViewSel.Rows.Count; i++)
+                {
+                    SqlCommand inResrRoom = new SqlCommand("insert into ReservationRoom values("+ idRest +", "+ Convert.ToInt32(dataGridViewSel.Rows[i].Cells[0].Value) + ", convert(date, getdate()), @night, " + Convert.ToInt32(dataGridViewSel.Rows[i].Cells[3].Value) + ", " + dateTimePickerIn.Value.ToString("dd-MM-yyyy") +", "+ dateTimePickerOut.Value.ToString("dd-MM-yyyy") + ")", Connection.conn);
+                    inResrRoom.Parameters.AddWithValue("@night", textBoxStaying.Text);
+                    Connection.conn.Open();
+                    inResrRoom.ExecuteNonQuery();
+                    Connection.conn.Close();
+
+                    SqlCommand upStatus = new SqlCommand("update Room set status='0' where ID="+ Convert.ToInt32(dataGridViewSel.Rows[i].Cells[0].Value) + "", Connection.conn);
+                    Connection.conn.Open();
+                    upStatus.ExecuteNonQuery();
+                    Connection.conn.Close();
+                }
+
+                if(dataGridViewItem.Rows.Count > 0)
+                {
+                    SqlCommand getRoomID = new SqlCommand("select top(1) id from ReservationRoom order by id desc", Connection.conn);
+                    Connection.conn.Open();
+                    SqlDataReader reader = getRoomID.ExecuteReader();
+                    reader.Read();
+                    int RoomID = reader.GetInt32(0);
+                    Connection.conn.Close();
+
+                    for(int j = 0; j < dataGridViewItem.Rows.Count; j++)
+                    {
+                        SqlCommand inItem = new SqlCommand("insert into ReservationRequestItem values("+ RoomID +", "+ Convert.ToInt32(dataGridViewItem.Rows[j].Cells[0].Value) + ", " + Convert.ToInt32(dataGridViewItem.Rows[j].Cells[2].Value) + ", " + Convert.ToInt32(dataGridViewItem.Rows[j].Cells[4].Value) + ")", Connection.conn);
+                        Connection.conn.Open();
+                        inItem.ExecuteNonQuery();
+                        Connection.conn.Close();
+                    }
+                }
+
+                MessageBox.Show("Reservation Success", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                id_cust = 0;
+                radioButtonSearch.Checked = true;
+                customer.textBoxName.Text = "";
+                customer.textBoxEmail.Text = "";
+                customer.textBoxNIK.Text = "";
+                customer.textBoxPhone.Text = "";
+                dataGridViewAvb.DataSource = null;
+                dataGridViewAvb.Rows.Clear();
+                dataGridViewSel.Rows.Clear();
+                dataGridViewItem.Rows.Clear();
             }
         }
 
