@@ -35,3 +35,24 @@ C:\Users\PC 08\Source\Repos\LKS-Hotel\Hotel\obj\Debug\Hotel.MasterFoodNDrink.res
 C:\Users\PC 08\source\repos\LKS-Hotel\Hotel\obj\Debug\Hotel.Reservation.resources
 C:\Users\PC 08\source\repos\LKS-Hotel\Hotel\obj\Debug\Hotel.AddCustomer.resources
 C:\Users\PC 08\source\repos\LKS-Hotel\Hotel\obj\Debug\Hotel.CheckIn.resources
+C:\Users\SMKN 1 BONDOWOSO\Source\Repos\LKS-Hotel\Hotel\bin\Debug\Hotel.exe.config
+C:\Users\SMKN 1 BONDOWOSO\Source\Repos\LKS-Hotel\Hotel\bin\Debug\Hotel.exe
+C:\Users\SMKN 1 BONDOWOSO\Source\Repos\LKS-Hotel\Hotel\bin\Debug\Hotel.pdb
+C:\Users\SMKN 1 BONDOWOSO\Source\Repos\LKS-Hotel\Hotel\obj\Debug\Hotel.csproj.AssemblyReference.cache
+C:\Users\SMKN 1 BONDOWOSO\Source\Repos\LKS-Hotel\Hotel\obj\Debug\Hotel.csproj.SuggestedBindingRedirects.cache
+C:\Users\SMKN 1 BONDOWOSO\Source\Repos\LKS-Hotel\Hotel\obj\Debug\Hotel.AddCustomer.resources
+C:\Users\SMKN 1 BONDOWOSO\Source\Repos\LKS-Hotel\Hotel\obj\Debug\Hotel.CheckIn.resources
+C:\Users\SMKN 1 BONDOWOSO\Source\Repos\LKS-Hotel\Hotel\obj\Debug\Hotel.MainAdmin.resources
+C:\Users\SMKN 1 BONDOWOSO\Source\Repos\LKS-Hotel\Hotel\obj\Debug\Hotel.MainEmployee.resources
+C:\Users\SMKN 1 BONDOWOSO\Source\Repos\LKS-Hotel\Hotel\obj\Debug\Hotel.MainLogin.resources
+C:\Users\SMKN 1 BONDOWOSO\Source\Repos\LKS-Hotel\Hotel\obj\Debug\Hotel.MasterEmployee.resources
+C:\Users\SMKN 1 BONDOWOSO\Source\Repos\LKS-Hotel\Hotel\obj\Debug\Hotel.MasterFoodNDrink.resources
+C:\Users\SMKN 1 BONDOWOSO\Source\Repos\LKS-Hotel\Hotel\obj\Debug\Hotel.MasterItem.resources
+C:\Users\SMKN 1 BONDOWOSO\Source\Repos\LKS-Hotel\Hotel\obj\Debug\Hotel.MasterRoom.resources
+C:\Users\SMKN 1 BONDOWOSO\Source\Repos\LKS-Hotel\Hotel\obj\Debug\Hotel.MasterRoomType.resources
+C:\Users\SMKN 1 BONDOWOSO\Source\Repos\LKS-Hotel\Hotel\obj\Debug\Hotel.Properties.Resources.resources
+C:\Users\SMKN 1 BONDOWOSO\Source\Repos\LKS-Hotel\Hotel\obj\Debug\Hotel.Reservation.resources
+C:\Users\SMKN 1 BONDOWOSO\Source\Repos\LKS-Hotel\Hotel\obj\Debug\Hotel.csproj.GenerateResource.cache
+C:\Users\SMKN 1 BONDOWOSO\Source\Repos\LKS-Hotel\Hotel\obj\Debug\Hotel.csproj.CoreCompileInputs.cache
+C:\Users\SMKN 1 BONDOWOSO\Source\Repos\LKS-Hotel\Hotel\obj\Debug\Hotel.exe
+C:\Users\SMKN 1 BONDOWOSO\Source\Repos\LKS-Hotel\Hotel\obj\Debug\Hotel.pdb

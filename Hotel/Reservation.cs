@@ -437,8 +437,11 @@ namespace Hotel
                 label1.Text = idRest.ToString();
                 for(int i = 0; i < dataGridViewSel.Rows.Count; i++)
                 {
-                    SqlCommand inResrRoom = new SqlCommand("insert into ReservationRoom values("+ idRest +", "+ Convert.ToInt32(dataGridViewSel.Rows[i].Cells[0].Value) + ", '"+ dateTimePickerIn.Value.Date +"', @night, " + Convert.ToInt32(dataGridViewSel.Rows[i].Cells[3].Value) + ", '" + dateTimePickerIn.Value +"', '"+ dateTimePickerOut.Value+ "')", Connection.conn);
+                    SqlCommand inResrRoom = new SqlCommand("insert into ReservationRoom values("+ idRest +", "+ Convert.ToInt32(dataGridViewSel.Rows[i].Cells[0].Value) + ", @start, @night, " + Convert.ToInt32(dataGridViewSel.Rows[i].Cells[3].Value) + ", @in, @out)", Connection.conn);
                     inResrRoom.Parameters.AddWithValue("@night", textBoxStaying.Text);
+                    inResrRoom.Parameters.AddWithValue("@start", dateTimePickerIn.Value.Date);
+                    inResrRoom.Parameters.AddWithValue("@in", dateTimePickerIn.Value);
+                    inResrRoom.Parameters.AddWithValue("@out", dateTimePickerOut.Value);
                     Connection.conn.Open();
                     inResrRoom.ExecuteNonQuery();
                     Connection.conn.Close();
