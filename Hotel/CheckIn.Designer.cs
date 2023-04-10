@@ -152,6 +152,7 @@
             this.textBoxNIK.Name = "textBoxNIK";
             this.textBoxNIK.Size = new System.Drawing.Size(303, 22);
             this.textBoxNIK.TabIndex = 37;
+            this.textBoxNIK.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNIK_KeyPress);
             // 
             // radioButton2
             // 
@@ -207,6 +208,7 @@
             this.textBoxAge.Name = "textBoxAge";
             this.textBoxAge.Size = new System.Drawing.Size(303, 22);
             this.textBoxAge.TabIndex = 30;
+            this.textBoxAge.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxAge_KeyPress);
             // 
             // label6
             // 

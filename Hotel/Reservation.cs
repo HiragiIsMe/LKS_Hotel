@@ -212,15 +212,19 @@ namespace Hotel
             }
             dataGridViewCustomer.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
-
-        private void comboBoxItem_SelectionChangeCommitted(object sender, EventArgs e)
+        void getPrice()
         {
-            SqlCommand cmd = new SqlCommand("select RequestPrice from Item where ID="+ comboBoxItem.SelectedValue +"", Connection.conn);
+            SqlCommand cmd = new SqlCommand("select RequestPrice from Item where ID=" + comboBoxItem.SelectedValue + "", Connection.conn);
             Connection.conn.Open();
             SqlDataReader reader = cmd.ExecuteReader();
             reader.Read();
             textBoxPrice.Text = reader["RequestPrice"].ToString();
+            textBoxSubtotal.Text = (reader.GetInt32(0) * numericUpDownQty.Value).ToString();
             Connection.conn.Close();
+        }
+        private void comboBoxItem_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            getPrice();
         }
         void ItemGrid()
         {
@@ -286,6 +290,7 @@ namespace Hotel
             {
                 dataGridViewItem.CurrentRow.Selected = true;
                 dataGridViewItem.Rows.RemoveAt(dataGridViewItem.SelectedRows[0].Index);
+                getTotal();
             }
         }
         bool Validate()
@@ -479,6 +484,11 @@ namespace Hotel
                 dataGridViewSel.Rows.Clear();
                 dataGridViewItem.Rows.Clear();
             }
+        }
+
+        private void numericUpDownQty_ValueChanged(object sender, EventArgs e)
+        {
+            getPrice();
         }
 
         private void dataGridViewCustomer_CellClick(object sender, DataGridViewCellEventArgs e)

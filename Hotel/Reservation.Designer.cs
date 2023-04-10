@@ -241,6 +241,7 @@
             0,
             0,
             0});
+            this.numericUpDownQty.ValueChanged += new System.EventHandler(this.numericUpDownQty_ValueChanged);
             // 
             // label11
             // 

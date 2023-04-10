@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -29,7 +30,50 @@ namespace Hotel
         {
             onload();
         }
+        bool validateIn()
+        {
+            if(textBoxName.Text == "" || textBoxNIK.Text == "" || textBoxEmail.Text == "" || textBoxAge.Text == "" || radioButton1.Checked == false || radioButton2.Checked == false)
+            {
+                MessageBox.Show("All Customer Field Must Be Filled", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
 
+            bool isValidEmail(string email)
+            {
+                var trimmedEmail = email.Trim();
+                if (trimmedEmail.EndsWith("."))
+                {
+                    return false;
+                }
+
+                try
+                {
+                    var mail = new MailAddress(email);
+                    return mail.Address == trimmedEmail;
+                }
+                catch
+                {
+                    return false;
+                }
+            }
+            if (isValidEmail(textBoxEmail.Text) == false)
+            {
+                MessageBox.Show("Customer Email Doesn't Valid", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            if (textBoxNIK.TextLength != 16)
+            {
+                MessageBox.Show("Customer NIK Must Be 16 Digit", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            return true;
+        }
+
+        bool validateUp()
+        {
+            return true;
+        }
         private void buttonAdd_Click(object sender, EventArgs e)
         {
             SqlCommand cmd = new SqlCommand("select * from Reservation where BookingCode=@code", Connection.conn);
@@ -50,6 +94,22 @@ namespace Hotel
             {
                 Connection.conn.Close();
                 MessageBox.Show("Booking Code Not Found", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void textBoxAge_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxNIK_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
             }
         }
 
