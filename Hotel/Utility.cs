@@ -13,8 +13,6 @@ namespace Hotel
 {
     class Connection
 
-
-
     {
         public static string connection = @"Data Source=DESKTOP-HUJGH1E\SQLEXPRESS;Initial Catalog=Hotel;Integrated Security=True";
 

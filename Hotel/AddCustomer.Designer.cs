@@ -47,17 +47,19 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(11, 11);
+            this.label6.Location = new System.Drawing.Point(15, 16);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(125, 16);
+            this.label6.Size = new System.Drawing.Size(172, 24);
             this.label6.TabIndex = 10;
             this.label6.Text = "Customer Name :";
             // 
             // textBoxName
             // 
-            this.textBoxName.Location = new System.Drawing.Point(155, 8);
+            this.textBoxName.Location = new System.Drawing.Point(213, 12);
+            this.textBoxName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(303, 22);
+            this.textBoxName.Size = new System.Drawing.Size(415, 29);
             this.textBoxName.TabIndex = 9;
             // 
             // label1
@@ -65,35 +67,40 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(97, 40);
+            this.label1.Location = new System.Drawing.Point(133, 60);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 16);
+            this.label1.Size = new System.Drawing.Size(55, 24);
             this.label1.TabIndex = 12;
             this.label1.Text = "NIK :";
             // 
             // textBoxNIK
             // 
-            this.textBoxNIK.Location = new System.Drawing.Point(155, 40);
+            this.textBoxNIK.Location = new System.Drawing.Point(213, 60);
+            this.textBoxNIK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxNIK.Name = "textBoxNIK";
-            this.textBoxNIK.Size = new System.Drawing.Size(303, 22);
+            this.textBoxNIK.Size = new System.Drawing.Size(415, 29);
             this.textBoxNIK.TabIndex = 11;
+            this.textBoxNIK.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNIK_KeyPress);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(82, 71);
+            this.label2.Location = new System.Drawing.Point(113, 106);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 16);
+            this.label2.Size = new System.Drawing.Size(74, 24);
             this.label2.TabIndex = 14;
             this.label2.Text = "Email :";
             // 
             // textBoxEmail
             // 
-            this.textBoxEmail.Location = new System.Drawing.Point(155, 71);
+            this.textBoxEmail.Location = new System.Drawing.Point(213, 106);
+            this.textBoxEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(303, 22);
+            this.textBoxEmail.Size = new System.Drawing.Size(415, 29);
             this.textBoxEmail.TabIndex = 13;
             // 
             // label3
@@ -101,9 +108,10 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(74, 105);
+            this.label3.Location = new System.Drawing.Point(102, 158);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 16);
+            this.label3.Size = new System.Drawing.Size(86, 24);
             this.label3.TabIndex = 16;
             this.label3.Text = "Gender:";
             // 
@@ -112,17 +120,19 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(19, 142);
+            this.label4.Location = new System.Drawing.Point(26, 213);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(117, 16);
+            this.label4.Size = new System.Drawing.Size(164, 24);
             this.label4.TabIndex = 18;
             this.label4.Text = "Phone Number :";
             // 
             // textBoxPhone
             // 
-            this.textBoxPhone.Location = new System.Drawing.Point(155, 139);
+            this.textBoxPhone.Location = new System.Drawing.Point(213, 208);
+            this.textBoxPhone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxPhone.Name = "textBoxPhone";
-            this.textBoxPhone.Size = new System.Drawing.Size(303, 22);
+            this.textBoxPhone.Size = new System.Drawing.Size(415, 29);
             this.textBoxPhone.TabIndex = 17;
             // 
             // label5
@@ -130,33 +140,36 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(30, 177);
+            this.label5.Location = new System.Drawing.Point(41, 266);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(106, 16);
+            this.label5.Size = new System.Drawing.Size(145, 24);
             this.label5.TabIndex = 20;
             this.label5.Text = "Date Of Birth : ";
             // 
             // comboBoxGender
             // 
             this.comboBoxGender.FormattingEnabled = true;
-            this.comboBoxGender.Location = new System.Drawing.Point(155, 103);
+            this.comboBoxGender.Location = new System.Drawing.Point(213, 154);
+            this.comboBoxGender.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBoxGender.Name = "comboBoxGender";
-            this.comboBoxGender.Size = new System.Drawing.Size(303, 24);
+            this.comboBoxGender.Size = new System.Drawing.Size(415, 32);
             this.comboBoxGender.TabIndex = 21;
             // 
             // dateTimePickerBirth
             // 
-            this.dateTimePickerBirth.Location = new System.Drawing.Point(155, 172);
+            this.dateTimePickerBirth.Location = new System.Drawing.Point(213, 258);
+            this.dateTimePickerBirth.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dateTimePickerBirth.Name = "dateTimePickerBirth";
-            this.dateTimePickerBirth.Size = new System.Drawing.Size(303, 22);
+            this.dateTimePickerBirth.Size = new System.Drawing.Size(415, 29);
             this.dateTimePickerBirth.TabIndex = 22;
             // 
             // AddCustomer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(29)))), ((int)(((byte)(38)))));
-            this.ClientSize = new System.Drawing.Size(470, 213);
+            this.ClientSize = new System.Drawing.Size(646, 320);
             this.Controls.Add(this.dateTimePickerBirth);
             this.Controls.Add(this.comboBoxGender);
             this.Controls.Add(this.label5);
@@ -169,6 +182,7 @@
             this.Controls.Add(this.textBoxNIK);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBoxName);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "AddCustomer";
             this.Text = "AddCustomer";
             this.Load += new System.EventHandler(this.AddCustomer_Load);
