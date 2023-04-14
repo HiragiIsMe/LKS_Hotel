@@ -139,6 +139,9 @@
     <EmbeddedResource Include="CheckIn.resx">
       <DependentUpon>CheckIn.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CheckOut.resx">
+      <DependentUpon>CheckOut.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainAdmin.resx">
       <DependentUpon>MainAdmin.cs</DependentUpon>
     </EmbeddedResource>
