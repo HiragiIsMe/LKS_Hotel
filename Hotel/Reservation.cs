@@ -478,6 +478,7 @@ namespace Hotel
                 MessageBox.Show("Reservation Success", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 id_cust = 0;
                 radioButtonSearch.Checked = true;
+                textBoxStaying.Text = "";
                 customer.textBoxName.Text = "";
                 customer.textBoxEmail.Text = "";
                 customer.textBoxNIK.Text = "";
