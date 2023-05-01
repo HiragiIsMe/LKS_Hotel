@@ -58,3 +58,8 @@ C:\Users\SMKN 1 BONDOWOSO\Source\Repos\LKS-Hotel\Hotel\obj\Debug\Hotel.exe
 C:\Users\SMKN 1 BONDOWOSO\Source\Repos\LKS-Hotel\Hotel\obj\Debug\Hotel.pdb
 C:\Users\PC 08\source\repos\LKS-Hotel\Hotel\obj\Debug\Hotel.RequestAddItem.resources
 C:\Users\PC 08\source\repos\LKS-Hotel\Hotel\obj\Debug\Hotel.CheckOut.resources
+C:\Users\SMKN 1 BONDOWOSO\Source\Repos\LKS-Hotel\Hotel\obj\Debug\Hotel.CheckOut.resources
+C:\Users\SMKN 1 BONDOWOSO\Source\Repos\LKS-Hotel\Hotel\obj\Debug\Hotel.RequestAddItem.resources
+C:\Users\SMKN 1 BONDOWOSO\Source\Repos\LKS-Hotel\Hotel\obj\Debug\Hotel.csproj.ResolveComReference.cache
+C:\Users\SMKN 1 BONDOWOSO\Source\Repos\LKS-Hotel\Hotel\obj\Debug\Hotel.ReportCheckIn.resources
+C:\Users\SMKN 1 BONDOWOSO\source\repos\LKS-Hotel\Hotel\obj\Debug\Hotel.ReportGuest.resources

@@ -56,10 +56,11 @@
             // 
             this.panelMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(29)))), ((int)(((byte)(38)))));
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMain.Location = new System.Drawing.Point(0, 50);
+            this.panelMain.Location = new System.Drawing.Point(0, 60);
+            this.panelMain.Margin = new System.Windows.Forms.Padding(4);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(1278, 794);
-            this.panelMain.TabIndex = 10;
+            this.panelMain.Size = new System.Drawing.Size(1562, 953);
+            this.panelMain.TabIndex = 0;
             // 
             // timer1
             // 
@@ -74,8 +75,9 @@
             this.panel1.Controls.Add(this.menuStrip1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1278, 50);
+            this.panel1.Size = new System.Drawing.Size(1562, 60);
             this.panel1.TabIndex = 11;
             // 
             // labelClock
@@ -83,9 +85,10 @@
             this.labelClock.AutoSize = true;
             this.labelClock.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelClock.ForeColor = System.Drawing.Color.White;
-            this.labelClock.Location = new System.Drawing.Point(883, 18);
+            this.labelClock.Location = new System.Drawing.Point(1079, 22);
+            this.labelClock.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelClock.Name = "labelClock";
-            this.labelClock.Size = new System.Drawing.Size(70, 25);
+            this.labelClock.Size = new System.Drawing.Size(85, 29);
             this.labelClock.TabIndex = 14;
             this.labelClock.Text = "label1";
             // 
@@ -94,9 +97,10 @@
             this.label1Log.AutoSize = true;
             this.label1Log.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1Log.ForeColor = System.Drawing.Color.White;
-            this.label1Log.Location = new System.Drawing.Point(662, 18);
+            this.label1Log.Location = new System.Drawing.Point(809, 22);
+            this.label1Log.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1Log.Name = "label1Log";
-            this.label1Log.Size = new System.Drawing.Size(70, 25);
+            this.label1Log.Size = new System.Drawing.Size(85, 29);
             this.label1Log.TabIndex = 13;
             this.label1Log.Text = "label1";
             // 
@@ -107,13 +111,14 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Webdings", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(1161, 1);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button2.Location = new System.Drawing.Point(1419, 1);
+            this.button2.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(117, 43);
+            this.button2.Size = new System.Drawing.Size(143, 52);
             this.button2.TabIndex = 12;
             this.button2.Text = "r";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // menuStrip1
             // 
@@ -124,9 +129,10 @@
             this.fileToolStripMenuItem,
             this.masterToolStripMenuItem,
             this.reportToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(5, 12);
+            this.menuStrip1.Location = new System.Drawing.Point(6, 14);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(463, 36);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(321, 40);
             this.menuStrip1.TabIndex = 11;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -139,7 +145,7 @@
             this.fileToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.fileToolStripMenuItem.ForeColor = System.Drawing.Color.Yellow;
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(61, 32);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(71, 36);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // logoutToolStripMenuItem
@@ -147,7 +153,7 @@
             this.logoutToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(29)))), ((int)(((byte)(38)))));
             this.logoutToolStripMenuItem.ForeColor = System.Drawing.Color.Yellow;
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(180, 36);
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(214, 40);
             this.logoutToolStripMenuItem.Text = "Logout";
             // 
             // exitToolStripMenuItem
@@ -155,7 +161,7 @@
             this.exitToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(29)))), ((int)(((byte)(38)))));
             this.exitToolStripMenuItem.ForeColor = System.Drawing.Color.Yellow;
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 36);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(214, 40);
             this.exitToolStripMenuItem.Text = "Exit";
             // 
             // masterToolStripMenuItem
@@ -169,7 +175,7 @@
             this.masterToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.masterToolStripMenuItem.ForeColor = System.Drawing.Color.Yellow;
             this.masterToolStripMenuItem.Name = "masterToolStripMenuItem";
-            this.masterToolStripMenuItem.Size = new System.Drawing.Size(127, 32);
+            this.masterToolStripMenuItem.Size = new System.Drawing.Size(143, 36);
             this.masterToolStripMenuItem.Text = "Transaction";
             // 
             // employeeToolStripMenuItem
@@ -177,7 +183,7 @@
             this.employeeToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(29)))), ((int)(((byte)(38)))));
             this.employeeToolStripMenuItem.ForeColor = System.Drawing.Color.Yellow;
             this.employeeToolStripMenuItem.Name = "employeeToolStripMenuItem";
-            this.employeeToolStripMenuItem.Size = new System.Drawing.Size(321, 34);
+            this.employeeToolStripMenuItem.Size = new System.Drawing.Size(370, 40);
             this.employeeToolStripMenuItem.Text = "Reservation";
             this.employeeToolStripMenuItem.Click += new System.EventHandler(this.employeeToolStripMenuItem_Click);
             // 
@@ -186,7 +192,7 @@
             this.foodAndDrinkToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(29)))), ((int)(((byte)(38)))));
             this.foodAndDrinkToolStripMenuItem.ForeColor = System.Drawing.Color.Yellow;
             this.foodAndDrinkToolStripMenuItem.Name = "foodAndDrinkToolStripMenuItem";
-            this.foodAndDrinkToolStripMenuItem.Size = new System.Drawing.Size(321, 34);
+            this.foodAndDrinkToolStripMenuItem.Size = new System.Drawing.Size(370, 40);
             this.foodAndDrinkToolStripMenuItem.Text = "Check In";
             this.foodAndDrinkToolStripMenuItem.Click += new System.EventHandler(this.foodAndDrinkToolStripMenuItem_Click);
             // 
@@ -195,7 +201,7 @@
             this.itemToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(29)))), ((int)(((byte)(38)))));
             this.itemToolStripMenuItem.ForeColor = System.Drawing.Color.Yellow;
             this.itemToolStripMenuItem.Name = "itemToolStripMenuItem";
-            this.itemToolStripMenuItem.Size = new System.Drawing.Size(321, 34);
+            this.itemToolStripMenuItem.Size = new System.Drawing.Size(370, 40);
             this.itemToolStripMenuItem.Text = "Request Additional Item";
             this.itemToolStripMenuItem.Click += new System.EventHandler(this.itemToolStripMenuItem_Click);
             // 
@@ -204,7 +210,7 @@
             this.roomTypeToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(29)))), ((int)(((byte)(38)))));
             this.roomTypeToolStripMenuItem.ForeColor = System.Drawing.Color.Yellow;
             this.roomTypeToolStripMenuItem.Name = "roomTypeToolStripMenuItem";
-            this.roomTypeToolStripMenuItem.Size = new System.Drawing.Size(321, 34);
+            this.roomTypeToolStripMenuItem.Size = new System.Drawing.Size(370, 40);
             this.roomTypeToolStripMenuItem.Text = "Check Out";
             this.roomTypeToolStripMenuItem.Click += new System.EventHandler(this.roomTypeToolStripMenuItem_Click);
             // 
@@ -216,7 +222,7 @@
             this.reportToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.reportToolStripMenuItem.ForeColor = System.Drawing.Color.Yellow;
             this.reportToolStripMenuItem.Name = "reportToolStripMenuItem";
-            this.reportToolStripMenuItem.Size = new System.Drawing.Size(87, 32);
+            this.reportToolStripMenuItem.Size = new System.Drawing.Size(98, 36);
             this.reportToolStripMenuItem.Text = "Report";
             // 
             // checkInToolStripMenuItem
@@ -224,24 +230,27 @@
             this.checkInToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(29)))), ((int)(((byte)(38)))));
             this.checkInToolStripMenuItem.ForeColor = System.Drawing.Color.Yellow;
             this.checkInToolStripMenuItem.Name = "checkInToolStripMenuItem";
-            this.checkInToolStripMenuItem.Size = new System.Drawing.Size(182, 34);
+            this.checkInToolStripMenuItem.Size = new System.Drawing.Size(315, 40);
             this.checkInToolStripMenuItem.Text = "CheckIn";
+            this.checkInToolStripMenuItem.Click += new System.EventHandler(this.checkInToolStripMenuItem_Click);
             // 
             // guestToolStripMenuItem
             // 
             this.guestToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(29)))), ((int)(((byte)(38)))));
             this.guestToolStripMenuItem.ForeColor = System.Drawing.Color.Yellow;
             this.guestToolStripMenuItem.Name = "guestToolStripMenuItem";
-            this.guestToolStripMenuItem.Size = new System.Drawing.Size(182, 34);
+            this.guestToolStripMenuItem.Size = new System.Drawing.Size(315, 40);
             this.guestToolStripMenuItem.Text = "Guest";
+            this.guestToolStripMenuItem.Click += new System.EventHandler(this.guestToolStripMenuItem_Click);
             // 
             // MainEmployee
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1278, 844);
+            this.ClientSize = new System.Drawing.Size(1562, 1013);
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainEmployee";
             this.Text = "MainEmployee";
             this.Load += new System.EventHandler(this.MainEmployee_Load);

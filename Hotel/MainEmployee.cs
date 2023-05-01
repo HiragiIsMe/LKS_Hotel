@@ -84,5 +84,39 @@ namespace Hotel
             panelMain.Controls.Add(form);
             form.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are You Sure To Exit?", "Question", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+
+            if (result == DialogResult.OK)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void checkInToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ReportCheckIn form = new ReportCheckIn()
+            {
+                TopLevel = false,
+                TopMost = true
+            };
+            panelMain.Controls.Clear();
+            panelMain.Controls.Add(form);
+            form.Show();
+        }
+
+        private void guestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ReportGuest form = new ReportGuest()
+            {
+                TopLevel = false,
+                TopMost = true
+            };
+            panelMain.Controls.Clear();
+            panelMain.Controls.Add(form);
+            form.Show();
+        }
     }
 }
